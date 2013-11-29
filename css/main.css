@@ -1,2 +1,64 @@
 html, body { height: 100%; }
 
+/* defining the color scheme */
+
+body {
+    background-image:url('/images/txture.png');
+    color:#F0F0F0;
+    font-family:sans-serif;
+}
+
+a {
+    color:#C0C0C0;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#F9f9F9;
+}
+
+/* Sizing and position of the main divs */
+
+#header {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+#main {
+    border: solid black 1px;
+    padding:10px;
+    border-radius: 10px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    bottom:0;
+    width: 800px;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+/* More specific style */
+h1.title {
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+h1.title a{
+    color:#F0F0F0;
+}
+
+h1.title a:hover{
+    color:#D0D0D0;
+}
+
+#footer .ref {
+    margin-right:10px;
+}
