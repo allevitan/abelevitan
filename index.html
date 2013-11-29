@@ -1,8 +1,13 @@
-<head>
-<title>Abe Levitan</title>
-</head>
+---
+layout: default
+title: Abe Levitan
+---
 
-<body>
-<h1>Abe Levitan</h1>
-<p>I am an engineer and stuff.</p>
-</body>
+<div id="home">
+  <h1>Projects</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
