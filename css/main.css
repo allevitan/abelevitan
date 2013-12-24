@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-    color:#F9f9F9;
+    color:#F9F9F9;
 }
 
 /* Sizing and position of the main divs */
@@ -46,7 +46,6 @@ a:hover {
     margin-right:auto;
 }
 
-
 /* More specific style */
 h1.title {
     margin-bottom:0px;
@@ -61,6 +60,28 @@ h1.title a:hover{
     color:#D0D0D0;
 }
 
+#header ul.nav{
+    float:right;
+}
+
+#header ul.nav li{
+    display:inline-block;
+    margin-left:10px;
+}
+
+#header ul.nav li.active a {
+    color:#F9F9F9;
+}
+
+ul.posts {
+    list-style:none;
+}
+
 #footer .ref {
     margin-right:10px;
 }
+
+#footer .email {
+    float:right;
+}
+
