@@ -4,8 +4,9 @@ title: Abe Levitan
 section: about
 ---
 
-<div>
-  I do engineering and physics and things.
-  <br>
-  I also like food and coffee and whatnot.
+<img class="headshot" src="/images/headshot.jpg"></img>
+<div class="mebox">
+  {% capture bio %}{% include bio.md %}{% endcapture %}
+  {{ bio | markdownify }}
 </div>
+

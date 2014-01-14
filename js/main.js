@@ -1,4 +1,24 @@
 //I don't think it's reasonable to load jQuery or Zepto just to do this
+//So I won't
+
+function externify(){
+// makes all external links default to opening in new tab
+    var links = document.getElementsByTagName("a");
+    for (var i=0;i<links.length;i++){
+	if (links[i].getAttribute('href').slice(0,7) == 'http://'){
+	    links[i].setAttribute('target','_newtab');
+	}
+    }
+}
+
+window.onload = function(){
+    externify();
+}
+
+
+/*
+
+Currently commented out of the default template because it goes sucky on mobile
 
 window.padding = 50;
 window.maxWidth = 960;
@@ -33,3 +53,5 @@ window.onload = function(){
 window.onresize = function(){
     resizeify();
 }
+
+*/

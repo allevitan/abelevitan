@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Placebo Water"
+date:   2014-01-07 22:46:06
+categories: water joke placebo
+section: projects
+thumbnail: /images/placebo/thumbnail.jpg
+description: It's just water and food coloring!
+---
+
+It's the most fun you can have with your pants on!

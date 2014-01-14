@@ -2,6 +2,7 @@
 
 html { height: 100%; }
 
+
 /* defining the color scheme */
 
 body {
@@ -18,6 +19,7 @@ a {
 a:hover {
     color:#F9F9F9;
 }
+
 
 /* Sizing and position of the main divs */
 
@@ -46,6 +48,27 @@ a:hover {
     margin-right:auto;
 }
 
+
+/* utility classes */
+
+.rule { /* a horizontal rule, not a thematic break (for html5) */
+    height:0px;
+    width:98%;
+    border-top:solid black 1px;
+    margin-top:12px;
+    margin-bottom:12px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.float-left{
+    float:left;
+}
+
+.float-right{
+    float:right;
+}
+
 /* More specific style */
 h1.title {
     margin-bottom:0px;
@@ -60,8 +83,13 @@ h1.title a:hover{
     color:#D0D0D0;
 }
 
+h2.top, h3.top { /*headers at the top of the box */
+    margin-top:0px;
+}
+
 #header ul.nav{
     float:right;
+    padding-left:0px;
 }
 
 #header ul.nav li{
@@ -73,8 +101,61 @@ h1.title a:hover{
     color:#F9F9F9;
 }
 
+.mebox {
+    display:inline-block;
+    width:469px; /* so all browsers will fit it */
+    vertical-align:top;
+    margin-left:10px;
+}
+
+.mebox h3{
+    margin-top:0px;
+}
+
+img.headshot {
+    display:inline-block;
+    width:320px;
+    margin:0 -4px -4px 0; /*to fix a strange invisible space issue */
+}
+
 ul.posts {
+    padding-left:0px;
+    margin-top: 0px;
+    margin-bottom:0px;
     list-style:none;
+}
+
+li.project {
+    position:relative;
+    width: 100%;
+    height:150px;
+}
+
+li.project h3{
+    margin-top:0px;
+}
+
+.project-thumbnail {
+    margin-right:10px;
+    height:150px;
+    float:left;
+}
+
+.project-box {
+    height:150px;
+}
+
+.project-box h3{
+    margin-bottom:10px;
+}
+
+.project-box p{
+    margin-top:10px;
+}
+
+.post img{
+    width:70%;
+    margin-left:15%; /*ghetto ass centering over here */
 }
 
 #footer .ref {

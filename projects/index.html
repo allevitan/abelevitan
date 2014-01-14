@@ -1,0 +1,20 @@
+---
+layout: default
+title: Abe Levitan
+section: projects
+---
+
+<ul class="posts">
+  {% for post in site.posts %}
+  {% if forloop.first == false %}
+  <div class="rule"></div>
+  {% endif %}
+  <li class="project">
+    <img class="project-thumbnail" src={{ post.thumbnail }}></img>
+    <div class="project-box">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.description }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
