@@ -5,7 +5,8 @@ function externify(){
 // makes all external links default to opening in new tab
     var links = document.getElementsByTagName("a");
     for (var i=0;i<links.length;i++){
-	if (links[i].getAttribute('href').slice(0,7) == 'http://'){
+	if (links[i].getAttribute('href').slice(0,7) == 'http://' ||
+	    links[i].getAttribute('href').slice(0,8) == 'https://'){
 	    links[i].setAttribute('target','_newtab');
 	}
     }

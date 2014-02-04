@@ -5,6 +5,9 @@ date:   2013-12-24 22:46:06
 categories: robotics engineering cv computer-vision sprinkler poe
 section: projects
 thumbnail: /images/thermopylae/thumbnail.jpg
+Code: http://github.com/allevitan/Thermopylae
+CAD: http://grabcad.com/library/auto-targeting-sprinkler-1
+Docs: http://defenderofthermopylae.weebly.com/
 description: An auto-targeting water sprinkler built for Principles of Engineering.
 ---
 
@@ -16,4 +19,4 @@ Unlike a normal water sprinkler which only gets you wet some of the time, the de
 
 I designed the servo mount and the gearbox used to control the range of the sprinkler, helped spec the electrical parts, and sacrificed my body to test the finished product on a freezing December day.
 
-The full documentation is on the project's [website](http://defenderofthermopylae.weebly.com/), the code is up on [Github](http://github.com/allevitan/Thermopylae), and the CAD is up on [GrabCAD](https://grabcad.com/library/auto-targeting-sprinkler-1). 
+The full documentation is on the project's [website](http://defenderofthermopylae.weebly.com/), the code is up on [Github](http://github.com/allevitan/Thermopylae), and the CAD is up on [GrabCAD](http://grabcad.com/library/auto-targeting-sprinkler-1). 

@@ -1,7 +1,19 @@
 ---
 layout: default
 ---
-<h2 class="top">{{ page.title }}</h2>
-<div class="post">
+{% if page.Paper %}
+<a class="source" href="{{ page.Paper }}">Paper</a>
+{% endif %}
+{% if page.Docs %}
+<a class="source" href="{{ page.Docs }}">Docs</a>
+{% endif %}
+{% if page.CAD %}
+<a class="source" href="{{ page.CAD }}">CAD</a>
+{% endif %}
+{% if page.Code %}
+<a class="source" href="{{ page.Code }}">Code</a>
+{% endif %}
+<h2 class="top post-title">{{ page.title }}</h2>
+<article class="post">
 {{ page.content | unindent | markdownify }}
-</div>
+</article>
