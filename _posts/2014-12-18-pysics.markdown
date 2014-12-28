@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "Pysics"
+date: 2014-12-18 22:46:06
+categories: python dynamics diferential equations numpy scipy matplotlib sympy mechanical engineering
+section: projects
+thumbnail: /images/pysics/thumbnail.png
+Code: http://github.com/allevitan/pysics
+Paper: https://www.researchgate.net/publication/270104373_Pysics_2D_Mechanical_Simulation_in_Python
+description:  A general purpose simulation tool for 2D mechanical systems obeying holonomic constraints. The program is written in python and leverages numpy, scipy, sympy, and matplotlib for the dirty work.
+---
+
+Pysics grew from my decision to use python for all my simulations in Olin's [Dynamics](http://digitalcommons.olin.edu/engr_2340/) class. As the class progressed, I slowly accumulated a set of helper functions to automate common steps in the process. By the end of the semester my toolbox incorporated [sympy](http://www.sympy.org/en/index.html) to generate equations of motion, [numpy](http://www.numpy.org/) and [scipy](http://www.scipy.org/) for the numerical simulation, and [matplotlib](http://matplotlib.org/) for visualization.
+
+Pysics was my ultimate effort to make the process of simulating mechanical systems as easy as possible. It was inspired partially by [SimMechanics](http://www.mathworks.com/products/simmechanics/), although SimMechanics can do a heck of a lot more than pysics can. It includes tools to make defining, simulating, and visualizing systems easy and extensible.
+
+![A double pendulum on a cart](/images/pysics/cart_double_pendulum.png)
+
+### Simple Example
+
+One of the most beautiful mechanical systems is a simple pendulum, so let's look at how we'd simulate it in pysics. We first create a simulation object and define the direction and strength of gravity.
+
+```Python
+from pysics import *
+sim = Sim2d()
+sim.Gravity([0,-9.81])
+```
+
+Next, we set up the constraint that our pendulum must follow by writing its cartesian position in terms of a degree of freedom. In this case our degree of freedom is the angle from the vertical, and the point mass is confined to a circular track with radius 0.3. Once we have defined the system, we provide an initial condition for our degree of freedom and it's first derivative.
+
+```python
+th = sim.DOF('th')
+pend = sim.PointMass('pend', m=2, r=[0.3*(1+s.sin(th)),0.3*(1-s.cos(th))]))
+sim.place({th:(0.1,0)})
+```
+
+Finally, we simulate the system and automatically generate a few representative graphs.
+
+```python
+y = sim.run([0,5,0.01])
+sim.analyze()
+```
+
+We can now easily she the positions of the generalized coordinates, the trajectory of the body in real space, and the energy of the pendulum over time.
+
+![The results of the pendulum simulation](/images/pysics/pendulum.png)
+
+### More Examples
+
+The following example simulations all are run from the example code found in Pysics' [github repository](http://github.com/allevitan/pysics), and showcase the flexibility of the system.
+
+A baseball with strong aerodynamic drag, a classic example with a nonconservative force.
+![A Baseball with Drag](/images/pysics/baseball.png)
+
+A double solid pendulum, a simple multibody system.
+![A Double Solid Pendulum](/images/pysics/double_pendulum.png)
+
+A driven damped single pendulum, a simple system involving time-dependent forcing.
+![Driven Damped Pendulum](/images/pysics/driven_pendulum.png)
+
+A ball in a track on a spinning plate that acts like a pendulum, an intriguing example of a time-dependent constraint.
+![Centrifugal Pendulum](/images/pysics/centrifugal_pendulum.png)
+
+A raindrop falling through mist, a fun example of a time-dependent mass (where the mass is picked up with no momentum)
+![Raindrop falling through mist](/images/pysics/raindrop.png)
+
+The earth orbiting the sun, a multibody system with a 1/r potential
+![Earth and Sun](/images/pysics/earth_sun.png)
+
+A roller coaster with aerodynamic drag, a single body system with a complex constraint
+![Roller Coasrer](/images/pysics/coaster.png)
+
+
+### Method
+
+A detailed description of the algorithm that pysics uses is presented in my final paper for the course [here](https://www.researchgate.net/publication/270104373_Pysics_2D_Mechanical_Simulation_in_Python). The central idea, known as D'Alembert's principle, is that no work can be done by a force perpendicular to the directions a system is allowed to move in.
+
+The first thing that pysics does is to create a state vector describing the positioin and orientation of each body. This comes along with a system mass matrix, that attaches a mass (or moment of intertia) to each degree of freedom in the state vector. From there, the acceleration of the system is calculated symbolically.
+
+Finally, the system takes partial derivatives of the state vector with respect to each degree of freedom to determine the free directions of motion. Motion in these directions is free of constraint forces, so the system transforms the equation of motion of the state vector into the generalized coordinates and solves it using a 4th/5th order runge-kutte ode solver.

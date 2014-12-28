@@ -158,6 +158,7 @@ li.project h3{
 .project-thumbnail {
     margin-right:10px;
     height:148px;
+    width:148px;
     border: solid black 1px;
     float:left;
 }
@@ -191,6 +192,14 @@ a.source {
 .post img{
     width:70%;
     margin-left:15%; /*ghetto ass centering over here */
+}
+
+/*for code highlighting*/
+.post .highlight{
+    border: solid black 1px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #footer .ref {
