@@ -1,5 +1,5 @@
 name: Abe Levitan
 markdown: redcarpet
-pygments: false
+highlighter: pygments
 
 permalink: /projects/:title/
