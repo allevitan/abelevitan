@@ -4,8 +4,10 @@ title: Abe Levitan
 section: about
 ---
 
-<img class="headshot" src="/images/headshot.jpg"></img><div class="mebox">
+<div id="headshot"><img src="/images/headshot.jpg"></img></div>
+<div id="mebox">
   {% capture bio %}{% include bio.md %}{% endcapture %}
   {{ bio | markdownify }}
 </div>
+
 

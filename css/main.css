@@ -6,15 +6,21 @@ html { height: 100%; }
 /* defining the color scheme */
 
 body {
-    background-image:url('/images/txture.png');
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+/*    background:url('/images/txture.png');*/
+    background-color:#222222;
+    font-family: sans-serif;
 }
 
 #header a, #footer a {
-    color:#C0C0C0;
+    color:#DDDDDD;
     text-decoration:none;
 }
 
-#main a {
+#container a {
     color:#404040;
     text-decoration:none;
     font-weight: bold;
@@ -24,7 +30,7 @@ body {
     color:#F9F9F9;
 }
 
-#main a:hover {
+#container a:hover {
     color:#000000;
 }
 
@@ -35,21 +41,42 @@ body {
     width: 760px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
-    margin-bottom:10px;
-    font-family: sans-serif;
+    padding-left:40px;
+    padding-right:40px;
+    margin-top:40px;
+    margin-bottom:5px;
 }
 
-#main {
-    border: solid black 1px;
-    background-color:#F0F0F0;
-    box-shadow: 0px 0px 5px #000000;
+#container{
+    width:760px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+#main, #mebox, #headshot, #header ul.nav li.active {
+    background-color:#F5F5F5;
+}
+
+#main{
     padding:20px;
-    /*border-radius: 10px;*/
     width: 720px;
     margin-left: auto;
     margin-right: auto;
-    font-family: sans-serif;
+}
+
+#mebox{
+    display:inline-block;
+    padding:20px;
+    margin-left:20px;
+    width: 400px;
+}
+
+#headshot{
+    display:inline-block;
+    float:left;
+    width: 300px;
 }
 
 #footer {
@@ -59,7 +86,9 @@ body {
     margin-top:10px;
     margin-left: auto;
     margin-right:auto;
-    font-family: sans-serif;
+    margin-bottom:40px;
+    padding-left:40px;
+    padding-right:40px;
 }
 
 
@@ -104,38 +133,32 @@ h2.top, h3.top { /*headers at the top of the box */
 #header ul.nav{
     float:right;
     padding-left:0px;
+    margin-top:-5px;
+    margin-bottom:-20px;
 }
 
 #header ul.nav li{
     display:inline-block;
-    margin-left:10px;
+    padding: 15px;
 }
 
 #header ul.nav li.active a {
-    color:#F9F9F9;
+    color:#222222;
 }
 
-.mebox {
-    display:inline-block;
-    width:409px; /* so all browsers will fit it */
-    vertical-align:top;
-    margin-left:20px;
-}
-
-.mebox h3{
+#mebox h3{
     margin-top:0px;
     margin-bottom:10px;
 }
 
-.mebox p {
+#mebox p {
     margin-top:10px;
     margin-bottom:10px;
 }
 
-img.headshot {
-    display:inline-block;
-    width:288px;
-    border: solid black 1px;
+#headshot img {
+    display:block;
+    width:100%;    
 }
 
 ul.posts {
@@ -203,10 +226,10 @@ a.source {
 }
 
 #footer .ref {
-    margin-right:10px;
+    float:right;
+    margin-left:10px;
 }
 
 #footer .email {
-    float:right;
 }
 

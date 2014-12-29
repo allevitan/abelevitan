@@ -15,32 +15,30 @@
   <body>
     <div id="header">
       <ul class="nav">
-	{% if page.section == "about" %}
-	<li class="active">
-	{% else %}
-	<li>{% endif %}<a href="/">About</a></li>
-	{% if page.section == "projects" %}
-	<li class="active">
-	{% else %}
-	<li>{% endif %}<a href="/projects/">Projects</a></li>
+	{% if page.section == "about" %}<li class="active">{% else %}<li>{% endif %}<a href="/">About</a></li>{% if page.section == "projects" %}<li class="active">{% else %}<li>{% endif %}<a href="/projects/">Projects</a></li>
       </ul>
       <h1 class="title">
-	<small>I'm</small>
 	<a href="/">{{ site.name }}</a>
-	<small>{% if page.section == "projects" %}, check out these things I did!{% else %}<!--, motherfuckers!-->{% endif %}</small>
       </h1>
     </div>
     
-    <div id="main">
-      {{ content }}
+    
+    <div id="container">
+      {% if page.section == "about" %}
+      {{content}}
+      {% else %}
+      <div id="main">
+	{{ content }}
+      </div>
+      {% endif %}
     </div>
     
     <div id="footer">
-      <a class="email" href="mailto:abe@abelevitan.com">abe@abelevitan.com</a>
-      <a class="ref" href="http://www.linkedin.com/in/allevitan">LinkedIn</a>
+      <a class="ref" href="http://grabcad.com/abraham.levitan-1/">GrabCAD</a>
       <a class="ref" href="http://github.com/allevitan">GitHub</a>
       <a class="ref" href="https://www.researchgate.net/profile/Abraham_Levitan">ResearchGate</a>
-      <a class="ref" href="http://grabcad.com/abraham.levitan-1/">GrabCAD</a>
+      <a class="ref" href="http://www.linkedin.com/in/allevitan">LinkedIn</a>
+      <a class="email" href="mailto:abe@abelevitan.com">abe@abelevitan.com</a>
     </div>
     
   </body>

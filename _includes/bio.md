@@ -1,10 +1,10 @@
 ###Who am I?
 
-I'm a Junior at [Olin College](http://olin.edu/) majoring in [Engineering Physics][EPhys].
+I'm a Junior at [Olin College](http://olin.edu/) majoring in Engineering with a Concentration in Physics.
 
 ###What do I do?
 
-While Engineering Physics could mean almost anything, in practice I spend about half my time studying physics and half my time doing engineering. I mostly do electrical and computer engineering, but I've worked on the mechanical side for a number of projects as well.
+Physics and engineering, with an emphasis on the physics. I'm taking all the courses that make up a complete physics degree, and along the way I'm taking classes in electrical and mechanical engineering.
 
 ###What else do I do?
 
