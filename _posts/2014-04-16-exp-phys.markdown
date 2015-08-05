@@ -13,7 +13,7 @@ description: The Experimental Physics class at Wellesley college, which is rough
 
 Wellesley's [Experimental Physics 310](https://sites.google.com/a/wellesley.edu/physics-310/) class is essentially a set of small lab modules, each of which takes a week or two to complete. They mostly consist of reading a lab writeup, learning the background material for the lab, and confirming that some famous physics discovery is, in fact true.
 
-If that makes it sound dull than I apologize, because the process is in fact fascinating and illuminating. The modules range from optics experiments like the Doppler-free spectroscopy of Rubidium or the setup of an open-cavity HeNe LASER to tabletop experiments in high vacuum like the measurement of Copper's heat capacity at liquid helium temperatures. The notes and results from the first two experiments I performed in the lab can be found [here](http://blog.abe.io), and the Rubidium Spectroscopy results (shown partially below) are particularly interesting.
+If that makes it sound dull than I apologize, because the process is in fact fascinating and illuminating. The modules range from optics experiments like the Doppler-free spectroscopy of Rubidium or the setup of an open-cavity HeNe LASER to tabletop experiments in high vacuum like the measurement of Copper's heat capacity at liquid helium temperatures. The notes and results from the first two experiments I performed in the lab can be found [here](http://310.abe.io), and the Rubidium Spectroscopy results (shown partially below) are particularly interesting.
 
 ![Absorption spectrum of rubidium](/images/exp-phys/rubidium.png)
 

@@ -10,7 +10,7 @@ Paper:
 description: A simple central-equation based band structure calculator made for a computational materials science class.
 ---
 
-For my final project in *Physical Foundations of Materials Science*, I wrote a simple [band structure](http://en.wikipedia.org/wiki/Electronic_band_structure) calculator in python that implemented a central equation solver using a bare coulomb potential. A more detailed description of the 
+For my final project in *Physical Foundations of Materials Science*, I wrote a simple [band structure](http://en.wikipedia.org/wiki/Electronic_band_structure) calculator in python that implemented a central equation solver using a bare coulomb potential. A more detailed description of the calculation method can be found on [ResearchGate](https://www.researchgate.net/publication/270050011_Introduction_to_Band_Structure_Calculations).
 
 You may ask "Why not a better pseudopotential? Why didn't you use an orthogonalized plane wave basis, or a tight-binding model, or really anything that isn't the central equation?" The answer is simple - I implemented the entire project by myself in two weeks without using any external libraries (except numpy and matplotlib).
 

@@ -75,6 +75,6 @@ A roller coaster with aerodynamic drag, a single body system with a complex cons
 
 A detailed description of the algorithm that pysics uses is presented in my final paper for the course [here](https://www.researchgate.net/publication/270104373_Pysics_2D_Mechanical_Simulation_in_Python). The central idea, known as D'Alembert's principle, is that no work can be done by a force perpendicular to the directions a system is allowed to move in.
 
-The first thing that pysics does is to create a state vector describing the positioin and orientation of each body. This comes along with a system mass matrix, that attaches a mass (or moment of intertia) to each degree of freedom in the state vector. From there, the acceleration of the system is calculated symbolically.
+The first thing that pysics does is to create a state vector describing the position and orientation of each body. This comes along with a system mass matrix, that attaches a mass (or moment of intertia) to each degree of freedom in the state vector. From there, the acceleration of the system is calculated symbolically.
 
 Finally, the system takes partial derivatives of the state vector with respect to each degree of freedom to determine the free directions of motion. Motion in these directions is free of constraint forces, so the system transforms the equation of motion of the state vector into the generalized coordinates and solves it using a 4th/5th order runge-kutte ode solver.
